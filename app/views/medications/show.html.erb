@@ -1,0 +1,6 @@
+<%= @medication.name %>
+<ul>
+  <% @medication.find_patients.each do |patient| %>
+    <li><%= patient %></li>
+  <% end %>
+</ul>

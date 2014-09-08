@@ -32,7 +32,7 @@ feature "Patients" do
     click_link "Mercedes Jones"
     click_link "Add Prescription"
 
-    select "Tylenol", from: "Medication"
+    select "Tylenol", from: "Medication "
     fill_in "Dosage", with: "14 mg"
     fill_in "Schedule", with: "every 6 hours"
     select "2014", from: "prescription_starts_on_1i"

@@ -9,8 +9,8 @@
     </ul>
   <% end %>
   <p>
-    <%= f.label :medication %>
-    <%= f.select(:medication, options_for_select([ ["Select Medication", nil],["Tylenol", "Tylenol"],["Cough Syrup", "Cough Syrup"],["Advil", "Advil"] ])) %>
+    <%= f.label :medications %>
+    <%= f.select(:medications, options_for_select([ ["Select Medication", nil],["Tylenol", "Tylenol"],["Cough Syrup", "Cough Syrup"],["Advil", "Advil"] ])) %>
   </p><br/>
   <p>
     <%= f.label :dosage %>

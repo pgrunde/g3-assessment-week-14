@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20140908160014) do
   end
 
   create_table "prescriptions", force: true do |t|
-    t.string  "medication"
+    t.string  "medications"
     t.string  "dosage"
     t.string  "schedule"
     t.date    "starts_on"
