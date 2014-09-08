@@ -1,0 +1,34 @@
+<h1>Add a subscription to <%= @patient.first_name %> <%= @patient.last_name %></h1>
+
+<%= form_for @prescription, url: patient_prescriptions_path(@patient) do |f| %>
+  <% if f.object.errors.any? %>
+    <ul>
+      <% f.object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <p>
+    <%= f.label :medication %>
+    <%= f.select(:medication, options_for_select([ ["Select Medication", nil],["Tylenol", "Tylenol"],["Cough Syrup", "Cough Syrup"],["Advil", "Advil"] ])) %>
+  </p><br/>
+  <p>
+    <%= f.label :dosage %>
+    <%= f.text_field :dosage %>
+  </p><br/>
+  <p>
+    <%= f.label :schedule %>
+    <%= f.text_field :schedule %>
+  </p><br/>
+  <p>
+    <%= f.label :starts_on %>
+    <%= f.date_select :starts_on %>
+  </p><br/>
+  <p>
+    <%= f.label :ends_on %>
+    <%= f.date_select :ends_on %>
+  </p><br/>
+  <p>
+    <%= f.submit "Create Prescription" %>
+  </p>
+<% end %>
